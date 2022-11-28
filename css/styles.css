@@ -1,0 +1,105 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    color: #14FFEC;
+    font-family: 'Oxygen', sans-serif;
+}
+
+@media (max-width: 990px){
+    .show-only-desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width : 991px){
+    .show-only-mobile{
+        display:none;
+    }
+}
+
+
+
+
+
+
+header{
+    background-color: #212121;
+}
+
+header a{
+    -webkit-text-fill-color: #14FFEC;
+    transition: var(all 0.25s cubic-bezier(0.645,0.045,0.355,1));
+
+}
+
+header div#navbarSupportedContent{
+    position: absolute;
+    right: 40px;
+}
+header a:hover, header a:active{
+    -webkit-text-fill-color: white;
+}
+
+header .nav-item a::before {
+  content: '';
+  position: absolute;
+  width: 82%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+  }
+
+header a:hover::before {
+  transform-origin: left;
+  transform:scaleX(1);
+}
+
+header .navbar-brand{
+    position: relative;
+    left:40px;
+}
+
+header .navbar .show-only-mobile li{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header .navbar .show-only-mobile li:hover, header .navbar .show-only-mobile li:active{
+    -webkit-text-fill-color: white;
+}
+
+
+main{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+footer{
+    background-color: #323232;
+}
+footer .footerText{
+    text-align: center;
+}
+
+
+footer #footerButtons{
+    text-align: center;
+}
+
+footer #footerButtons a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
