@@ -3,15 +3,16 @@
     padding: 0;
 }
 
+
 body{
     font-size: 16px;
     color: #14FFEC;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #212121;
 
 }
 
-@media (max-width: 990px){
+@media screen and (max-width: 990px){
     .show-only-desktop{
         display: none;
     }
@@ -29,10 +30,7 @@ body{
     
 }
 
-
-
-
-
+/* ---------------------------------------------------------- */
 
 header{
     background-color: #212121;
@@ -86,6 +84,10 @@ header .navbar .show-only-mobile li:hover, header .navbar .show-only-mobile li:a
     -webkit-text-fill-color: white;
 }
 
+
+/* ---------------------------------------------------------- */
+
+
 section .show-only-mobile li{
         list-style-type: none;
         text-align: center;
@@ -97,18 +99,40 @@ section .show-only-mobile a{
     color: #14FFEC;
     
 }
+/* ---------------------------------------------------------- */
 
+main section{
+    padding: 20px;
+    padding-top: 50px;
+    background-color: #323232;
+    margin: auto;
+}
+main section h2{
+    color: #00ADB5;
+}
 
+main section p{
+    color: white;
+}
 
-main{
-    margin: 0px;
-    padding: 0px;
+main section .photoWrapper{
+    position: relative;
 }
 
 
+main section .myPhoto{
+    clip-path: circle();
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left:25%;
+}
+
+
+/* ---------------------------------------------------------- */
 
 footer{
-    background-color: #323232;
+    background-color: #212121;
 }
 footer .footerText{
     text-align: center;
@@ -123,4 +147,5 @@ footer #footerButtons a{
     margin-left: 20px;
     text-decoration: none;
 }
+
 
