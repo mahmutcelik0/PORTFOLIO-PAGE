@@ -37,9 +37,13 @@ header{
     background-color: #212121;
 }
 
-header a{
+header button{
     -webkit-text-fill-color: #14FFEC;
     transition: var(all 0.25s cubic-bezier(0.645,0.045,0.355,1));
+    background-color: #212121;
+    border: 0;
+    font-size: 1.25rem;
+    padding: 20px;
 
 }
 
@@ -47,14 +51,14 @@ header div#navbarSupportedContent{
     position: absolute;
     right: 40px;
 }
-header a:hover, header a:active{
+header button:hover, header button:active{
     -webkit-text-fill-color: white;
 }
 
-header .nav-item a::before {
+header .nav-item button::before {
   content: '';
   position: absolute;
-  width: 82%;
+  width: 85%;
   height: 4px;
   border-radius: 4px;
   background-color: white;
@@ -65,7 +69,7 @@ header .nav-item a::before {
   transition: transform .3s ease-in-out;
   }
 
-header a:hover::before {
+header button:hover::before {
   transform-origin: left;
   transform:scaleX(1);
 }
@@ -95,18 +99,37 @@ section .show-only-mobile li{
         margin-top: 10px;
         
 }
+section .show-only-mobile button{
+    text-decoration: none;
+    color: #14FFEC;
+    background-color: #212121;
+    border: 0;
+}
+
 section .show-only-mobile a{
     text-decoration: none;
     color: #14FFEC;
-    
 }
 /* ---------------------------------------------------------- */
+
+
+main section.tabContent{
+    display: none;
+}
+main section.contentActive{
+    display: block;
+}
+
+
+
+
 
 main section{
     padding: 20px;
     padding-top: 50px;
     background-color: #323232;
     margin: auto;
+    min-height: 82vh;
 }
 main section h2{
     color: #00ADB5;

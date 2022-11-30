@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+        
     
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" >
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    
-</head>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" >
+        <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+        
+    </head>
 <body>  
+
 
     <header>
         <nav class="navbar navbar-expand-lg ">
+            <!-- LEFT OF NAVBAR - ICON -->
             <a class="navbar-brand" href="mainPage.html">
                 <img src="images/icons8-c-67.png" alt="">
             </a>
             
-
+            <!-- RIGHT PART - CLICK PARTS-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               
                 <ul class="navbar-nav mr-auto">
                 
                 <div>
-                    <li class="nav-item link1">
-                    <a class="nav-link" href="#aboutMe">ABOUT ME!</a>
+                    <li class="nav-item">
+                    <button class="tabButton" data-for-tab="1">ABOUT ME!</button>
                 </li>
                 </div>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">EXPERIENCE</a>
+                    <button class="tabButton" data-for-tab="2">EXPERIENCE</button>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">PROJECTS</a>
+                    <button class="tabButton" data-for-tab="3">PROJECTS</button>
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
+                    <button class="tabButton" data-for-tab="4">CONTACT</button>
                 </li>
     
               </ul>
+
+              <!-- RIGHT PART - CV -->
               <a class="navbar-brand" href="mainPage.html">
                 <img src="/images/icons8-cv-50.png" alt="">
-            </a>
+                </a>
 
             </div>
 
@@ -61,54 +65,26 @@
             
 
             
-        </nav>  
+        </nav> 
     </header>
 
     <section class="show-only-mobile">
         <div class="col-sm-12 col-md-12 show-only-mobile mobilePart">
             <ul>
-                <li><a href="#aboutMe">ABOUT ME!</a></li>
-                <li><a href="#experience">EXPERIENCE</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="">RESUME</a></li>
+                <li><button class="tabButton" data-for-tab="1">ABOUT ME!</button></li>
+                <li><button class="tabButton" data-for-tab="2">EXPERIENCE</button></li>
+                <li><button class="tabButton" data-for-tab="3">PROJECTS</button></li>
+                <li><button class="tabButton" data-for-tab="4">CONTACT</button></li>
+                <li><a href="">RESUME</a></li> <!-- PDF EKLENECEK-->
             </ul>
         </div>
 
     </section>
-    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!--  -->
     <main>
-        <section id="aboutMe" style="min-height: 50vh;">
+        <section id="aboutMe" class="tabContent contentActive" data-tab="1">
             
             <div class="container-fluid">
                 <div class="row">
@@ -132,13 +108,28 @@
         </section>
 
     
-        <section id="experience" style="min-height: 50vh;"></section>
+        <section id="experience" class="tabContent" data-tab="2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>EXPERIENCE</h2>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p>I don't have any industry experience yet.</p>
+                    </div>                    
+                </div>
+                
+            </div>
         
         
-        <section id="projects" style="min-height: 50vh;"></section>
+        </section>
         
         
-        <section id="contact" style="min-height: 50vh;">
+        <section id="projects" class="tabContent" data-tab="3"></section>
+        
+        
+        <section id="contact" class="tabContent" data-tab="4">
             
             <div class="container-fluid">
                 <div class="row">
@@ -164,20 +155,9 @@
     
     
     </main>
+    <!--  -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -211,9 +191,13 @@
             </div>
         </div>
     </footer>
+
+
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.esm.js"></script>
     <script src="js/jquery-3.6.1.min.map"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
