@@ -3,7 +3,6 @@ function setupTabs(){
         button.addEventListener("click",() =>{
             const tabNumber = button.dataset.forTab;
             clickedButtonNumber = tabNumber;
-            console.log(clickedButtonNumber);
             clearAll();
             makeChange(tabNumber);
         });
@@ -27,3 +26,27 @@ function makeChange(number){
 document.addEventListener("DOMContentLoaded",()=>{
     setupTabs();
 })
+
+
+/* PRELOADER */
+
+var myVar;
+
+function preLoaderFunc() {
+    
+    myVar = setTimeout(showPage, 1500);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+
+    document.getElementById("progBody").style.display="block";
+
+    document.getElementById("progHead").style.display="block";
+
+    document.getElementById("progSection").style.display="block";
+
+    document.getElementById("progMain").style.display = "block";
+
+    document.getElementById("progFooter").style.display = "block";
+}

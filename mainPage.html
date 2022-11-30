@@ -16,10 +16,18 @@
         <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
         
     </head>
-<body>  
+<body onload="preLoaderFunc()" id="progBody">  
+    <!-- PRELOADER -->
+    <div id="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
+    <!--  -->
 
-    <header>
+    <header id="progHead">
         <nav class="navbar navbar-expand-lg ">
             <!-- LEFT OF NAVBAR - ICON -->
             <a class="navbar-brand" href="mainPage.html">
@@ -52,8 +60,8 @@
               </ul>
 
               <!-- RIGHT PART - CV -->
-              <a class="navbar-brand" href="mainPage.html">
-                <img src="images/icons8-cv-50.png" alt="">
+                <a class="navbar-brand" href="https://drive.google.com/file/d/1NofbOW93nTW9GaLBf3w70PRMAZJvsQyo/view?usp=share_link" target="_blank">
+                    <img src="images/icons8-cv-50.png" alt="">
                 </a>
 
             </div>
@@ -68,14 +76,14 @@
         </nav> 
     </header>
 
-    <section class="show-only-mobile">
+    <section class="show-only-mobile" id="progSection">
         <div class="col-sm-12 col-md-12 show-only-mobile mobilePart">
             <ul>
-                <li><button class="tabButton" data-for-tab="1">ABOUT ME!</button></li>
-                <li><button class="tabButton" data-for-tab="2">EXPERIENCE</button></li>
-                <li><button class="tabButton" data-for-tab="3">PROJECTS</button></li>
-                <li><button class="tabButton" data-for-tab="4">CONTACT</button></li>
-                <li><a href="">RESUME</a></li> <!-- PDF EKLENECEK-->
+                <li><button class="tabButton" data-for-tab="1"><a href="#aboutMe">ABOUT ME!</a></button></li>
+                <li><button class="tabButton" data-for-tab="2"><a href="#experience">EXPERIENCE</a></button></li>
+                <li><button class="tabButton" data-for-tab="3"><a href="#projects">PROJECTS</a></button></li>
+                <li><button class="tabButton" data-for-tab="4"><a href="#contact">CONTACT</a></button></li>
+                <li><a href="https://drive.google.com/file/d/1NofbOW93nTW9GaLBf3w70PRMAZJvsQyo/view?usp=share_link" target="_blank">RESUME</a></li> <!-- PDF EKLENECEK-->
             </ul>
         </div>
 
@@ -83,7 +91,7 @@
 
 
     <!--  -->
-    <main>
+    <main id="progMain">
         <section id="aboutMe" class="tabContent contentActive" data-tab="1">
             
             <div class="container-fluid">
@@ -126,7 +134,38 @@
         </section>
         
         
-        <section id="projects" class="tabContent" data-tab="3"></section>
+        <section id="projects" class="tabContent" data-tab="3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="projectFirstHeading">Some Things I've Built</h2>
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <h4>Movie Ticket Managment System</h4>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h4>Library Managment System</h4>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <h4>ToDo List</h4>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <h4>Lexical Analyzer & HYPERTEXT Browser</h4>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
         
         
         <section id="contact" class="tabContent" data-tab="4">
@@ -158,36 +197,32 @@
     <!--  -->
 
 
-    <footer>
+    <footer id="progFooter">
         <div class="container-fluid">
             <div class="row">
-                <div class="footerText">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footerText">
                     <span>Designed & Built by Mahmut Celik in 2022</span>
                 </div>
             </div>
-            <div class="row" id="footerButtons">
 
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a href="https://github.com/mahmutcelik0" target="_blank">
-                            <img src="images/icons8-github-squared-48.png" alt="">
-                        </a>
-    
-                        <a href="https://www.instagram.com/mahmutcelik0/">
-                            <img src="images/icons8-instagram-48.png" alt="">
-                        </a>
-    
-                        <a href="https://www.linkedin.com/in/mahmut-%C3%A7elik-198a9a200/">
-                            <img src="images/icons8-linkedin-48.png" alt="">
-                        </a>
-    
-                        <a href="mailto:mahmut.382@hotmail.com">
-                            <img src="images/icons8-envelope-48.png" alt="">
-                        </a>
-                    </div>
-                    
+            <div class="row" id="footerButtons"> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <a href="https://github.com/mahmutcelik0" target="_blank">
+                        <img src="images/icons8-github-squared-48.png" alt="">
+                    </a>
 
-    
+                    <a href="https://www.instagram.com/mahmutcelik0/">
+                        <img src="images/icons8-instagram-48.png" alt="">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mahmut-%C3%A7elik-198a9a200/">
+                        <img src="images/icons8-linkedin-48.png" alt="">
+                    </a>
+
+                    <a href="mailto:mahmut.382@hotmail.com">
+                        <img src="images/icons8-envelope-48.png" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
